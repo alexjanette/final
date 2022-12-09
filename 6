@@ -1,0 +1,8 @@
+Ml (while B do L,s)δ =
+  if Mb(B,s) == undef
+    then error
+    else if Mb(B,s) == false
+        then s
+        else if Msl(L,s) == error
+            then error
+             else Ml(while B do L, Msl(L,s))
